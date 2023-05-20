@@ -29,7 +29,7 @@ basicConfig(format="[%(asctime)s] [%(levelname)s] - %(message)s [%(filename)s:%(
                     level=INFO)
 LOGGER = getLogger(__name__)
 
-CONFIG_FILE_URL = getenv('CONFIG_FILE_URL')
+CONFIG_FILE_URL = getenv('CONFIG_FILE_URL', 'https://github.com/Anonymous17986/tele/blob/beta/sample_config.env')
 if len(CONFIG_FILE_URL) != 0:
     try:
         res = rget(CONFIG_FILE_URL)
